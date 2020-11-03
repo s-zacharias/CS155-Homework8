@@ -11,7 +11,7 @@ namespace Project1
             Duelist Bob = new Duelist() { Name = "Bob", ShootingAccuracy = 0.5, Alive = true };
             Duelist Charlie = new Duelist() { Name = "Charlie", ShootingAccuracy = 0.995, Alive = true };
 
-            // keep track of winners
+            // keep track of winners 
             int AaronWin = 0;
             int BobWin = 0;
             int CharlieWin = 0;
@@ -29,25 +29,10 @@ namespace Project1
                         if (Charlie.Alive)
                         {
                             Aaron.ShootAtTarget(Charlie);
-                            if (Charlie.Alive)
-                            {
-                                Console.WriteLine("Aaron missed Charlie!");
-                            } else
-                            {
-                                Console.WriteLine("Aaron got Charlie!");
-                            }
                         }
                         else if (Bob.Alive)
                         {
                             Aaron.ShootAtTarget(Bob);
-                            if (Bob.Alive)
-                            {
-                                Console.WriteLine("Aaron missed Bob!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Aaron got Bob!");
-                            }
                         }
                     }
                     if (Bob.Alive)
@@ -55,26 +40,10 @@ namespace Project1
                         if (Charlie.Alive)
                         {
                             Bob.ShootAtTarget(Charlie);
-                            if (Charlie.Alive)
-                            {
-                                Console.WriteLine("Bob missed Charlie!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Bob got Charlie!");
-                            }
                         }
                         else if (Aaron.Alive)
                         {
                             Bob.ShootAtTarget(Aaron);
-                            if (Aaron.Alive)
-                            {
-                                Console.WriteLine("Bob missed Aaron!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Bob got Aaron!");
-                            }
                         }
                     }
                     if (Charlie.Alive)
@@ -82,43 +51,36 @@ namespace Project1
                         if (Bob.Alive)
                         {
                             Charlie.ShootAtTarget(Bob);
-                            if (Bob.Alive)
-                            {
-                                Console.WriteLine("Charlie missed Bob!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Charlie got Bob!");
-                            }
                         }
                         else if (Aaron.Alive)
                         {
                             Charlie.ShootAtTarget(Aaron);
-                            if (Aaron.Alive)
-                            {
-                                Console.WriteLine("Charlie missed Aaron!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Charlie got Aaron!");
-                            }
                         }
                     }
                 }
                 if (Aaron.Alive)
                 {
                     AaronWin++;
-                } else if (Bob.Alive)
+                }
+                else if (Bob.Alive)
                 {
                     BobWin++;
-                } else if (Charlie.Alive)
+                }
+                else if (Charlie.Alive)
                 {
                     CharlieWin++;
                 }
+                Aaron.Alive = true;
+                Bob.Alive = true;
+                Charlie.Alive = true;
             }
-            Console.WriteLine("Aaron won: " + AaronWin);
-            Console.WriteLine("Bob won: " + BobWin);
-            Console.WriteLine("Charlie won: " + CharlieWin);
+
+            Console.WriteLine("Aaron won: " + AaronWin + " out of " + duels + " duels" +
+                "\n or " + (double)AaronWin/duels * 100 + "% of duels");
+            Console.WriteLine("Bob won: " + BobWin + " out of " + duels + " duels" +
+                "\n or " + (double)BobWin / duels * 100 + "% of duels");
+            Console.WriteLine("Charlie won: " + CharlieWin + " out of " + duels + " duels" +
+                "\n or " + (double)CharlieWin / duels * 100 + "% of duels");
         }
     }
 }
