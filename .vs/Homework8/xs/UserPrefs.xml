@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{1ED72A50-607B-49FE-86C5-7B994404FAA5}|Default">
+  <MonoDevelop.Ide.ItemProperties.Project1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project1/Program.cs">
+    <Files>
+      <File FileName="Project1/Program.cs" Line="116" Column="34" />
+      <File FileName="Project1/Duelist.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
